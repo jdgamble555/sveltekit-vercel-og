@@ -5,10 +5,6 @@ import Card from "$lib/card.svelte";
 const width = 1600;
 const height = 900;
 
-export const config = {
-    runtime: 'edge'
-};
-
 // 1200 x 675 - 16x9
 // 1200 x 1200 - 1x1 - google feature image
 // 1200 x 900 - 4x3

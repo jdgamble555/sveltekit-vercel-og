@@ -1,0 +1,1 @@
+<div style="color:red">Hello Vercel!</div>

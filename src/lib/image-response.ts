@@ -17,7 +17,7 @@ function unescapeHtml(html: string) {
 
 export interface SvelteComponentSSR<T extends SvelteComponent> {
     render: (
-        props: ComponentProps<T>
+        props?: ComponentProps<T>
     ) => SvelteRenderResult;
 }
 
@@ -33,7 +33,7 @@ export interface SvelteRenderResult {
 export class ImageResponse<T extends SvelteComponent> extends VercelOGImageResponse {
     constructor(
         component: ComponentType<T>,
-        props: ComponentProps<T>,
+        props?: ComponentProps<T>,
         options?: ConstructorParameters<typeof VercelOGImageResponse>[1]
     ) {
         const result = (component as unknown as SvelteComponentSSR<T>).render(props);

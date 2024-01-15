@@ -8,7 +8,7 @@ const height = 900;
 export const GET = (async ({ fetch }) => {
 
 	const response = await fetch('https://og-playground.vercel.app/inter-latin-ext-400-normal.woff');
-	const noto = await response.arrayBuffer();
+	const fontData = await response.arrayBuffer();
 
 	return new ImageResponse(
 		Card,
@@ -17,7 +17,7 @@ export const GET = (async ({ fetch }) => {
 			fonts: [
 				{
 					name: 'Inter Latin',
-					data: Buffer.from(noto),
+					data: fontData,
 					weight: 600,
 					style: 'normal'
 				}

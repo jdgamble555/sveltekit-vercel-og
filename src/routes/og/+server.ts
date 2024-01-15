@@ -12,7 +12,7 @@ export const GET = (async ({ fetch }) => {
 
 	return new ImageResponse(
 		Card,
-		{},
+		undefined,
 		{
 			fonts: [
 				{

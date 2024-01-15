@@ -16,7 +16,7 @@ export const GET = (async ({ fetch }) => {
 		{
 			fonts: [
 				{
-					name: 'Noto',
+					name: 'Inter Latin',
 					data: Buffer.from(noto),
 					weight: 600,
 					style: 'normal'

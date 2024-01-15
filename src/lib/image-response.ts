@@ -34,7 +34,7 @@ export class ImageResponse<T extends SvelteComponent> extends VercelOGImageRespo
     constructor(
         component: ComponentType<T>,
         props: ComponentProps<T>,
-        options?: ConstructorParameters<typeof VercelOGImageResponse>['1']
+        options?: ConstructorParameters<typeof VercelOGImageResponse>[1]
     ) {
         const result = (component as unknown as SvelteComponentSSR<T>).render(props);
         const element = html(unescapeHtml(`${result.html}<style>${result.css.code}</style>`));

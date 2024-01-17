@@ -6,7 +6,7 @@ const width = 1600;
 const height = 900;
 
 export const config = {
-    runtime: 'nodejs18.x'
+    runtime: 'edge'
 };
 
 export const GET = (async ({ fetch }) => {

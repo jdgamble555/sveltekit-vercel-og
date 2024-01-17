@@ -33,8 +33,8 @@ export interface SvelteRenderResult {
 export class ImageResponse<T extends SvelteComponent> extends VercelOGImageResponse {
     constructor(
         component: ComponentType<T>,
-        props?: ComponentProps<T>,
-        options?: ConstructorParameters<typeof VercelOGImageResponse>[1]
+        options?: ConstructorParameters<typeof VercelOGImageResponse>[1],
+        props?: ComponentProps<T>        
     ) {
         const result = (component as unknown as SvelteComponentSSR<T>).render(props);
         const element = html(unescapeHtml(`${result.html}<style>${result.css.code}</style>`));

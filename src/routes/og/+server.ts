@@ -5,6 +5,10 @@ import Card from "$lib/card.svelte";
 const width = 1600;
 const height = 900;
 
+export const config = {
+    runtime: 'nodejs18.x'
+};
+
 export const GET = (async ({ fetch }) => {
 
 	const response = await fetch('https://og-playground.vercel.app/inter-latin-ext-400-normal.woff');
@@ -12,7 +16,6 @@ export const GET = (async ({ fetch }) => {
 
 	return new ImageResponse(
 		Card,
-		undefined,
 		{
 			fonts: [
 				{
@@ -24,7 +27,8 @@ export const GET = (async ({ fetch }) => {
 			],
 			width,
 			height
-		}
+		},
+		{ text: 'Ready to dive in?', spanText: 'Start your free trial today.' }
 	);
 
 }) satisfies RequestHandler;
